@@ -1,0 +1,15 @@
+{
+	"name": "data01azure",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "fea4aa65-ef81-4863-bc03-8392d1b0da56",
+		"tenantId": "0bb26725-013d-429d-b868-37a89bc8d8e9"
+	}
+}
