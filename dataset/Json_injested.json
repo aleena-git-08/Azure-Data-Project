@@ -1,0 +1,19 @@
+{
+	"name": "Json_injested",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Ingested",
+				"fileSystem": "azure-data"
+			}
+		},
+		"schema": {}
+	}
+}

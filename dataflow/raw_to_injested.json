@@ -1,0 +1,40 @@
+{
+	"name": "raw_to_injested",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Json1",
+						"type": "DatasetReference"
+					},
+					"name": "RawNews"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "Json_injested",
+						"type": "DatasetReference"
+					},
+					"name": "InjestedData"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     documentForm: 'documentPerLine') ~> RawNews",
+				"RawNews sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> InjestedData"
+			]
+		}
+	}
+}
