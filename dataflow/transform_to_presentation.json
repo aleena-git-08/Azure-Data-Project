@@ -70,7 +70,7 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select1",
-				"select1 sink(allowSchemaDrift: true,",
+				"select1 sink(allowSchemaDrift: false,",
 				"     validateSchema: false,",
 				"     umask: 0022,",
 				"     preCommands: [],",
