@@ -15,6 +15,92 @@
 				"fileSystem": "azure-data"
 			}
 		},
-		"schema": {}
+		"schema": {
+			"type": "object",
+			"properties": {
+				"MRData": {
+					"type": "object",
+					"properties": {
+						"RaceTable": {
+							"type": "object",
+							"properties": {
+								"Races": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"Circuit": {
+												"type": "object",
+												"properties": {
+													"Location": {
+														"type": "object",
+														"properties": {
+															"country": {
+																"type": "string"
+															},
+															"lat": {
+																"type": "string"
+															},
+															"locality": {
+																"type": "string"
+															},
+															"long": {
+																"type": "string"
+															}
+														}
+													},
+													"circuitId": {
+														"type": "string"
+													},
+													"circuitName": {
+														"type": "string"
+													},
+													"url": {
+														"type": "string"
+													}
+												}
+											},
+											"date": {
+												"type": "string"
+											},
+											"raceName": {
+												"type": "string"
+											},
+											"round": {
+												"type": "string"
+											},
+											"season": {
+												"type": "string"
+											},
+											"url": {
+												"type": "string"
+											}
+										}
+									}
+								}
+							}
+						},
+						"limit": {
+							"type": "string"
+						},
+						"offset": {
+							"type": "string"
+						},
+						"series": {
+							"type": "string"
+						},
+						"total": {
+							"type": "string"
+						},
+						"url": {
+							"type": "string"
+						},
+						"xmlns": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		}
 	}
 }

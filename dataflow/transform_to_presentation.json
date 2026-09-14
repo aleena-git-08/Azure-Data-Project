@@ -15,7 +15,10 @@
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
+				"source(output(",
+				"          MRData as (RaceTable as (Races as (Circuit as (Location as (country as string, lat as string, locality as string, long as string), circuitId as string, circuitName as string, url as string), date as string, raceName as string, round as string, season as string, url as string)[]), limit as string, offset as string, series as string, total as string, url as string, xmlns as string)",
+				"     ),",
+				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
 				"     documentForm: 'documentPerLine') ~> source1"
