@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "part-00000-38673124-2015-4fca-9a98-cf026a885351-c000.json",
 				"folderPath": "Ingested",
 				"fileSystem": "azure-data"
 			}
