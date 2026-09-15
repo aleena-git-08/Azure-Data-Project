@@ -94,7 +94,6 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "part-00000-38673124-2015-4fca-9a98-cf026a885351-c000.json",
 						"folderPath": "Ingested",
 						"fileSystem": "azure-data"
 					}
@@ -398,13 +397,14 @@
 						"userProperties": [],
 						"typeProperties": {
 							"dataflow": {
-								"referenceName": "raw_to_injested",
+								"referenceName": "transform_to_presentation",
 								"type": "DataFlowReference",
 								"parameters": {},
 								"datasetParameters": {
-									"RawNews": {},
-									"InjestedData": {}
-								}
+									"source1": {},
+									"sink1": {}
+								},
+								"linkedServiceParameters": {}
 							},
 							"staging": {},
 							"compute": {
@@ -472,7 +472,7 @@
 				"lastPublishTime": "2026-09-10T06:35:13Z"
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/dataflows/raw_to_injested')]",
+				"[concat(variables('factoryId'), '/dataflows/transform_to_presentation')]",
 				"[concat(variables('factoryId'), '/datasets/RestResource1')]",
 				"[concat(variables('factoryId'), '/datasets/Json1')]"
 			]
