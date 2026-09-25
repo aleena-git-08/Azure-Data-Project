@@ -338,7 +338,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Repos/Azure-Data-Project/databricks/01_ingest_f1"
+							"notebookPath": "/Users/pearlydaruja@gmail.com/Azure-Data-Project/Databricks/01_ingest_f1"
 						},
 						"linkedServiceName": {
 							"referenceName": "AzureDatabricks1",
