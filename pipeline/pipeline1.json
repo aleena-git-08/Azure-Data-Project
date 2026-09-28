@@ -53,6 +53,26 @@
 			{
 				"name": "Notebook1",
 				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/pearlydaruja@gmail.com/Azure-Data-Project/Databricks/01_ingest_f1"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Job1",
+				"type": "DatabricksJob",
 				"dependsOn": [
 					{
 						"activity": "Copy_restresourse_to_json",
@@ -70,7 +90,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/pearlydaruja@gmail.com/Azure-Data-Project/Databricks/01_ingest_f1"
+					"jobId": "196618186616572"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
