@@ -57,16 +57,7 @@
 					"accessToken": {
 						"type": "SecureString",
 						"value": "[parameters('AzureDatabricks1_accessToken')]"
-					},
-					"newClusterNodeType": "Standard_D4ds_v5",
-					"newClusterNumOfWorker": "1",
-					"newClusterSparkEnvVars": {
-						"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
-					},
-					"newClusterVersion": "14.3.x-scala2.12",
-					"clusterOption": "Fixed",
-					"newClusterInitScripts": [],
-					"dataSecurityMode": "USER_ISOLATION"
+					}
 				}
 			},
 			"dependsOn": []
@@ -319,8 +310,8 @@
 						]
 					},
 					{
-						"name": "Notebook1",
-						"type": "DatabricksNotebook",
+						"name": "Job1",
+						"type": "DatabricksJob",
 						"dependsOn": [
 							{
 								"activity": "Copy_restresourse_to_json",
@@ -338,7 +329,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Users/pearlydaruja@gmail.com/Azure-Data-Project/Databricks/01_ingest_f1"
+							"jobId": "196618186616572"
 						},
 						"linkedServiceName": {
 							"referenceName": "AzureDatabricks1",
