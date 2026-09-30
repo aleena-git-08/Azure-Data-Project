@@ -8,7 +8,7 @@
 		"annotations": [],
 		"type": "RestResource",
 		"typeProperties": {
-			"relativeUrl": "races/?limit=100&offset={offset}"
+			"relativeUrl": ""
 		},
 		"schema": []
 	},
