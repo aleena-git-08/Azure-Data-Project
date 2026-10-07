@@ -13,7 +13,7 @@ This project builds a complete data pipeline for Formula 1 racing data.
 The pipeline automatically extracts F1 race information from a REST API, stores the raw data in Azure Data Lake Storage Gen2, transforms and cleans the data using Azure Data Factory and Azure Databricks, creates analytical datasets, and visualizes the results in Power BI.
 
 ### End-to-End Architecture
-
+```text
                     ┌─────────────────────┐
                     │   F1 REST API       │
                     │ api.jolpi.ca/ergast │
